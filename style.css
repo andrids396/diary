@@ -356,6 +356,8 @@ li{
     /* layout tengah */
     .layout-tengah{
         width: 100%;
+        min-height: 0;
+        /* flex: 1; */
         margin: 0;
     }
 
