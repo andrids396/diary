@@ -1,0 +1,301 @@
+/* palet warna */
+:root{
+    --pink1: #ffe9ef;
+    --pink2: #ffc9d7;
+    --pink3: #ffbccd;
+    --pink4: #ff9cb5;
+    --pink5: #fc809f;
+    --pink-teks: #c23a5c;
+}
+
+/* reset margin padding */
+body, h2, h4, p, input, button, textarea, li{
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* mengatasi padding atas pada h2 */
+    font-family: sans-serif;
+}
+
+/* pengaturan umun btn */
+button{
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--pink5);
+    border-radius: 5px;
+    color: var(--pink1);
+    font-weight: bold;
+    max-width: max-content;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #ff6189;
+}
+button:active{
+    scale: 1.03;
+}
+
+/* pengaturan umum input */
+input{
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--pink1);
+    border-radius: 5px;
+    font-size: 15px;
+    color: var(--pink-teks);
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+input:hover{
+    outline: 2px solid var(--pink4);
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    /* border: 1px solid #111; */
+    height: 100vh;
+    background-color: var(--pink1);
+
+    /* center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teks-pink{
+    color: var(--pink-teks);
+}
+
+.penjelasan-aplikasi-diary{
+    /* border: 1px solid #111; */
+    /* text-align: justify; */
+    font-style: italic;
+}
+
+/* === BAGIAN BUAT AKUN DAN LOGIN === */
+/* #container-auth{
+    display: none;
+} */
+
+.form-buat-akun-login{
+    /* border: 1px solid red; */
+    width: 400px;
+    background-color: var(--pink2);
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+/* Login */
+#form-auth-login{
+    /* border: 1px solid #111; */
+    display: flex;
+    margin-top: 20px;
+
+    /* flex */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buat-akun{
+    font-style: italic;
+}
+.buat-akun:hover{
+    color: #72142c;
+}
+
+/* Buat akun */
+
+
+#form-auth-buat-akun{
+    /* border: 1px solid black; */
+    margin-top: 30px;
+
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* === BAGIAN APLIKASI === */
+
+.container-aplikasi{
+    /* border: 1px solid #111; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    min-height: 0;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--pink2);
+}
+/* == Layout kiri == */
+.layout-kiri{
+    /* border: 1px solid #111; */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.header-layout-kiri{
+    /* border: 1px solid black; */
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+#penulis{
+    font-size: 12px;
+}
+
+.menulis{
+    margin-bottom: 10px;
+}
+
+ul{
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+
+/* daftar isi */
+li{
+    list-style: none;
+}
+
+.tombol-daftar-isi{
+    /* border: 1px solid black; */
+    padding: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    background-color: transparent;
+    color: var(--pink-teks);
+}
+.tombol-daftar-isi:hover{
+    background-color: transparent;
+    color: #72142c;
+    scale: 1.03;
+}
+.tombol-daftar-isi:focus{
+    outline: none;
+    color: #72142c;
+    scale: 1.03;
+}
+
+/* == Layout tengah == */
+.layout-tengah{
+    /* border: 1px solid red; */
+    flex: 3;
+    height: 100%;
+    background-color: var(--pink1);
+    border-radius: 10px;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.input-diary{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 100%;
+}
+
+.input-judul-diary{
+    /* border: 1px solid black; */
+    background-color: transparent;
+    padding: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+.input-judul-diary:hover{
+    outline: none;
+}
+
+.input-isi-diary{
+    flex: 1;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+.input-isi-diary:focus{
+    outline: none;
+}
+
+.wadah-tols{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* container display */
+.container-display{
+    display: none;
+}
+
+.wadah-judul-hapus-edit{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.judul-diary-display{
+    flex: 1;
+}
+
+.titik-tiga{
+    background-color: transparent;
+    color: var(--pink-teks);
+    border-radius: 50%;
+}
+.titik-tiga:hover{
+    background-color: var(--pink2);
+}
+
+.btn-edit{
+    display: none;
+}
+
+.btn-hapus{
+    background-color: transparent;
+    border: 1px solid #111;
+    color: #111;
+    box-sizing: border-box;
+    display: none;
+}
+.btn-hapus:hover{
+    background-color: #111;
+    color: #ffe9ef;
+}
+
+/* isi display */
+.isi-diary-display{
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+/* == edit diary == */
+.wadah-edit-diary{
+    display: none;
+}
+/* == layout kanan == */
+.layout-kanan{
+    /* border: 1px solid orange; */
+    flex: 1;
+    height: 100%;
+}

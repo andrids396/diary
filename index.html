@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="container-auth" class="container">
+        <div class="form-buat-akun-login">
+            <h2 class="judul-diary teks-pink">Diary</h2>
+            <p class="penjelasan-aplikasi-diary teks-pink">Tulis apa yang kamu alami atau pikirkan, supaya bisa mengingatnya kemudian hari</p>
+
+            <form id="form-auth-login">
+                <p class="teks-pink">Login</p>
+                <input type="email" id="input-email-login" class="input-email" placeholder="emain@email.com" required>
+                <input type="password" id="input-password-login" class="input-email" placeholder="Password" required>
+                
+                <button type="submit" id="btn-login" class="btn-login">Login</button>
+                
+                <p class="teks-pink"><small>Belum punya akun? <a href="#" id="buat-akun" class="buat-akun teks-pink">Daftar di sini</a></small></p>
+            </form>
+            
+            <form id="form-auth-buat-akun">
+                <p class="teks-pink">Buat Akun</p>
+                <input type="email" id="input-email-buat-akun" class="input-email-buat-akun" placeholder="email@email.com" required>
+                <input type="password" id="input-password-buat-akun" class="input-password-buat-akun" placeholder="Pasword" required>
+
+                <button type="submit" id="btn-buat-akun" class="btn-buat-akun">Buat Akun</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div id="container-aplikasi" class="container-aplikasi container">
+        <div class="layout-kiri">
+            <div class="header-layout-kiri">
+                <h2 class="head-diary-layout-kiri teks-pink">DIARY</h2>
+                <p id="penulis" class="teks-pink"></p>
+            </div>
+
+            <button id="menulis" class="menulis">Menulis</button>
+            <h4 class="daftar teks-pink">Daftar diary</h4>
+            <ul id="daftar-tulisan" class="daftar-tulisan"></ul>
+        </div>
+
+        <div class="layout-tengah">
+            <form id="input-diary" class="input-diary">
+                <input type="text" id="input-judul-diary" class="input-judul-diary teks-pink" placeholder="Judul Diary">
+                <textarea id="input-isi-diary" class="input-isi-diary teks-pink" placeholder="Isi Diari"></textarea>
+                <div id="wadah-tols" class="wadah-tols">
+                    <div id="tampilan-tanggal" class="tampilan-tanggal teks-pink"></div>
+                    <button type="submit" id="btn-simpan-diary-baru" class="simpan">Simpan</button>
+                </div>
+            </form>
+
+            <div id="container-display" class="container-display input-diary"></div>
+
+            <form id="wadah-edit-diary" class="wadah-edit-diary input-diary"></form>
+        </div>
+
+        <div class="layout-kanan">
+            <button id="btn-logout">Logout</button>
+        </div>
+    </div>
+
+    <script type="module" src="scrit.js"></script>
+</body>
+</html>
