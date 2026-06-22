@@ -38,11 +38,13 @@ const formAuthLogin = document.querySelector("#form-auth-login");
 const inputEmailLogin = document.querySelector("#input-email-login");
 const inputPasswordLogin = document.querySelector("#input-password-login");
 const buatAkun = document.querySelector("#buat-akun");
+const checkboxLihatSandi = document.querySelector("#checkbox-lihat-sandi");
 
 // Buat akun
 const formAuthBuatAkun = document.querySelector("#form-auth-buat-akun");
 const inputEmailBuatAkun = document.querySelector("#input-email-buat-akun");
 const inputPasswordBuatAkun = document.querySelector("#input-password-buat-akun");
+const checkboxLihatSandiBuatAkun = document.querySelector("#checkbox-lihat-sandi-buat-akun");
 
 // === APPLIKASI ===
 
@@ -129,6 +131,27 @@ formAuthBuatAkun.addEventListener("submit", async (event) => {
         console.log("Gagal membuat akun:", error);
     }
 })
+
+// == melihat password ==
+// login
+checkboxLihatSandi.addEventListener("change", function() {
+    // mengecek jika dicentang
+    if (this.checked){
+        inputPasswordLogin.type = "text";
+    }else{
+        inputPasswordLogin.type = "password";
+    }
+});
+
+// buat akun
+checkboxLihatSandiBuatAkun.addEventListener("change", function() {
+    // mengecek jika dicentang
+    if (this.checked){
+        inputPasswordBuatAkun.type = "text";
+    }else{
+        inputPasswordBuatAkun.type = "password";
+    }
+});
 
 // === APLIKASI ===
 
@@ -466,7 +489,6 @@ onAuthStateChanged(auth, async (user) => {
         tampilanAplikasi(user);
 
     }else{
-        console.log("refres false");
         containerAuth.style.display = "flex";
         containerAplikasi.style.display = "none";
     }

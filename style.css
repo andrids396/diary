@@ -110,6 +110,13 @@ body{
     color: #72142c;
 }
 
+.lihat-email{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 /* Buat akun */
 
 
