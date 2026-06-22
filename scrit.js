@@ -98,7 +98,7 @@ formAuthLogin.addEventListener("submit", async (event) => {
         containerAplikasi.style.display = "flex";
 
         
-        console.log("Berhasil login");
+        // console.log("Berhasil login");
     }catch(error){
         console.log("Gagal login:", error);
     }
@@ -114,7 +114,17 @@ formAuthBuatAkun.addEventListener("submit", async (event) => {
         // menyuruh satpam membuat akun baru diserver
         const prosesBuatAkun = await createUserWithEmailAndPassword(auth, inputEmailBuatAkun.value, inputPasswordBuatAkun.value);
 
-        console.log("Berhasil membuat akun");
+        // simpan uid aktif
+        UID_AKTIF = prosesLogin.user.uid;
+
+        // menangkap email login
+        emailLogin = prosesLogin.user.email;
+
+        // manipulasi tampilan aplikasi
+        containerAuth.style.display = "none";
+        containerAplikasi.style.display = "flex";
+
+        // console.log("Berhasil membuat akun");
     }catch(error){
         console.log("Gagal membuat akun:", error);
     }
@@ -272,12 +282,12 @@ async function menampilkanDiary(token, uid) {
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(dataPerubahanKirim)
                 });
-                console.log("perubahan berhasil disimpan");
+                // console.log("perubahan berhasil disimpan");
 
                 menampilkanDiary(token, uid);
                 tampilanAplikasi(auth.currentUser);
             }catch(error){
-                console.log("gagal melakukan perubahan");
+                console.log("gagal melakukan perubahan:", error);
             }
         });
     });
@@ -353,8 +363,6 @@ inputDiary.addEventListener("submit", async (event) => {
             // update tampilan aplikasi MASIH GAGAL
             tampilanAplikasi(auth.currentUser);
 
-            // mematikan edit
-            edit = false;
         }catch(error){
             console.log("Gagal memuat data ke database:", error);
         }

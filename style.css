@@ -299,3 +299,70 @@ li{
     flex: 1;
     height: 100%;
 }
+
+/* === UNTUK HP === */
+@media (max-width: 768px) {
+    /* === login === */
+    .container-login{
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form-buat-akun-login{
+        /* background-color: transparent; */
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* === Aplikasi === */
+    .container-aplikasi{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* layout kiri */
+    .layout-kiri{
+        /* border: 1px solid black; */
+        padding-right: 0;
+        flex: 0;
+
+        /* untuk overflow x daftar isi */
+        width: 100%;
+    }
+
+    ul{
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 0;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        padding-left: 0;
+    }
+    li{
+        border-right: 1px solid var(--pink-teks);
+        padding-right: 5px;
+        flex-shrink: 0; /* KUNCI 2: Paksa elemen li tidak menyusut/mengecil */
+        white-space: nowrap; /* KUNCI 3: Paksa teks judul tetap 1 baris ke kanan */
+    }
+
+    /* layout tengah */
+    .layout-tengah{
+        width: 100%;
+        margin: 0;
+    }
+
+    /* judul display diary */
+    .judul-diary-display{
+        flex-shrink: 0;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+}
